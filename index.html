@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML Tutorial</title>
+</head>
+
+<body>
+
+  <h1>Tämä on otsikko</h1>
+  <p>Tänne tulee tekstiä.</p>
+  <input id="tekstikentta" type="text">
+  <button onclick="tulostaTeksti()">Tulosta teksti</button>
+  <p>Väri</p>
+  <input id="vari" onchange="muutaVari()" type="text" />
+
+</body>
+<script>
+  function tulostaTeksti() {
+    var teksti = document.getElementById("tekstikentta").value;
+    tekstistaElementti(teksti);
+	document.getElementById("tekstikentta").value = "";
+  }
+  
+  function tekstistaElementti(txt) {
+    var kappale = document.createElement("p");
+    kappale.innerHTML = txt;
+    document.body.appendChild(kappale);
+  }
+  
+  function muutaVari() {
+    var vari = document.getElementById("vari").value;
+    document.getElementsByTagName("body")[0].style.backgroundColor = vari;
+  }
+</script>
+</html>
