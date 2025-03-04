@@ -19,8 +19,18 @@
 </head>
 <body>
 
-    <h1>Jeren nettisivu</h1>
+    <h1 id="demo">Jeren nettisivu</h1>
     <p>Tervetuloa nettisivulleni! :)</p>
+
+    <button onclick="myFunction()">Paina paina!</button>
+
+    <script>
+        function myFunction() {
+            let x = document.getElementById("demo");
+            x.style.fontSize = "125px";
+            x.style.color = "red";
+        }
+    </script>
 
 </body>
 </html>
